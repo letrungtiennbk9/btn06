@@ -1,0 +1,450 @@
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>Chi tiết sản phẩm</h2>
+					<div class="page_link">
+						<a href="/index">Trang chủ</a>
+						<a href="/category">Loại sản phẩm</a>
+						<a href="/single-product">Chi tiết sản phẩm</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Single Product Area =================-->
+	<div class="product_image_area">
+		<div class="container">
+			<div class="row s_product_inner">
+				<div class="col-lg-6">
+					<div class="s_product_img">
+						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+									<img src="/img/product/single-product/s-product-s-2.jpg" alt="">
+								</li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="1">
+									<img src="/img/product/single-product/s-product-s-3.jpg" alt="">
+								</li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="2">
+									<img src="/img/product/single-product/s-product-s-4.jpg" alt="">
+								</li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img class="d-block w-100" src={{product.imagePath}} alt="First slide">
+								</div>
+								<div class="carousel-item">
+									<img class="d-block w-100" src={{product.imagePath}} alt="Second slide">
+								</div>
+								<div class="carousel-item">
+									<img class="d-block w-100" src={{product.imagePath}} alt="Third slide">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 offset-lg-1">
+					<div class="s_product_text">
+						<h3>{{product.title}}</h3>
+						<h2>{{product.price}} VND</h2>
+						<ul class="list">
+							<li>
+								<a class="active" href="#">
+									<span>Loại sản phẩm</span> : {{product.typeProduct}}</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>Tình trạng</span> : Sẵn có</a>
+							</li>
+						</ul>
+						<p>Thiết kế thời trang, đơn giản không kém phần hiện đại.
+							Kiểu dáng gọn nhẹ, năng động.
+							Chất vải thun mềm mại, dễ thấm hút mồ hôi.
+							Phù hợp nhiều hoàn cảnh: mặc nhà, đi học, đi chơi, du lịch...</p>
+						<div class="product_count">
+							<label for="qty">Số lượng</label>
+							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+							 class="increase items-count" type="button">
+								<i class="lnr lnr-chevron-up"></i>
+							</button>
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+							 class="reduced items-count" type="button">
+								<i class="lnr lnr-chevron-down"></i>
+							</button>
+						</div>
+						<div class="card_area">
+							<a class="main_btn" href="#">Thêm vào giỏ</a>
+							<a class="icon_btn" href="#">
+								<i class="lnr lnr lnr-diamond"></i>
+							</a>
+							<a class="icon_btn" href="#">
+								<i class="lnr lnr lnr-heart"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================End Single Product Area =================-->
+
+	<!--================Product Description Area =================-->
+	<section class="product_description_area">
+		<div class="container">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mô tả</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Chi tiết</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Bình luận</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews</a>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+					<p>Beryl Cook là một trong những nghệ sĩ tài năng và gây cười nhất nước Anh. Những bức ảnh của Beryl có những người phụ nữ ở
+						mọi hình dạng và kích cỡ thích thú. Giữa hai cuộc chiến tranh thế giới, Beryl Cook cuối cùng rời trường Kendrick 
+						ở Reading năm 15 tuổi, nơi cô đến thư ký. trường học và sau đó vào một văn phòng bảo hiểm. Sau khi chuyển đến London 
+						và sau đó là Hampton, cuối cùng cô kết hôn với người hàng xóm bên cạnh từ Reading, John Cook. Ông là một sĩ quan trong Hải 
+						quân Merchant và sau khi ông rời biển vào năm 1956, họ đã mua một quán rượu trong một năm trước khi John nhận một công việc 
+						ở Nam Rhodesia với một công ty xe máy. Beryl đã mua cho con trai nhỏ của họ một hộp màu nước, và khi chỉ cho anh ta cách sử dụng nó,
+						ô đã quyết định rằng bản thân cô khá thích vẽ tranh. Sau đó, John đã mua cho cô một bộ tranh vẽ trẻ con cho ngày sinh nhật của 
+						cô và chính với điều này, cô đã tạo ra tác phẩm quan trọng đầu tiên của mình, một bức chân dung dài một nửa của một phụ nữ da đen 
+						với biểu cảm trống rỗng và bộ ngực lớn. Nó được đặt tên một cách khéo léo Hangover, bởi chồng Beryl, và thường rất bực bội khi cố
+						gắng lên kế hoạch cho những bữa ăn được thiết kế cho một người. 
+						</p>
+				</div>
+				<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+					<div class="table-responsive">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td>
+										<h5>Rộng</h5>
+									</td>
+									<td>
+										<h5>128mm</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Dài</h5>
+									</td>
+									<td>
+										<h5>508mm</h5>
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+										<h5>Nặng</h5>
+									</td>
+									<td>
+										<h5>52gm</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Kiểm tra chất lượng</h5>
+									</td>
+									<td>
+										<h5>Có</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Độ bền</h5>
+									</td>
+									<td>
+										<h5>3 năm</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Đóng gói</h5>
+									</td>
+									<td>
+										<h5>Được kiểm tra hàng</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Xuất xứ</h5>
+									</td>
+									<td>
+										<h5>Gucci</h5>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="comment_list">
+								<div class="review_item">
+									<div class="media">
+										<div class="d-flex">
+											<img src="/img/product/single-product/review-1.png" alt="">
+										</div>
+										<div class="media-body">
+											<h4>Nguyễn Duy Khánh</h4>
+											<h5>4 tháng 11, 2019 vào lúc 05:56 pm</h5>
+											<a class="reply_btn" href="#">Trả lời</a>
+										</div>
+									</div>
+									<p>Khá là ổn đó. Chất lượng rất được và này nọ!</p>
+								</div>
+								<div class="review_item reply">
+									<div class="media">
+										<div class="d-flex">
+											<img src="/img/product/single-product/review-2.png" alt="">
+										</div>
+										<div class="media-body">
+											<h4>Blake Ruiz</h4>
+											<h5>12 tháng 4, 2019 vào lúc 05:56 pm</h5>
+											<a class="reply_btn" href="#">Trả lời</a>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								</div>
+								<div class="review_item">
+									<div class="media">
+										<div class="d-flex">
+											<img src="/img/product/single-product/review-3.png" alt="">
+										</div>
+										<div class="media-body">
+											<h4>Blake Ruiz</h4>
+											<h5>12th Vào lúc, 2019 vào lúc 05:56 pm</h5>
+											<a class="reply_btn" href="#">Trả lời</a>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="review_box">
+								<h4>Đăng bình luận</h4>
+								<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="text" class="form-control" id="name" name="name" placeholder="Tên đầy đủ">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="email" class="form-control" id="email" name="email" placeholder="Địa chỉ email">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="text" class="form-control" id="number" name="number" placeholder="Số điện thoại">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea class="form-control" name="message" id="message" rows="1" placeholder="Tin nhắn"></textarea>
+										</div>
+									</div>
+									<div class="col-md-12 text-right">
+										<button type="submit" value="submit" class="btn submit_btn">Đăng bình luận!</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="row total_rate">
+								<div class="col-6">
+									<div class="box_total">
+										<h5>Tổng quan</h5>
+										<h4>4.0</h4>
+										<h6>(03 Reviews)</h6>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="rating_list">
+										<h3>Dựa vào 3 Reviews</h3>
+										<ul class="list">
+											<li>
+												<a href="#">5 Sao
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i> 01</a>
+											</li>
+											<li>
+												<a href="#">4 Sao
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i> 01</a>
+											</li>
+											<li>
+												<a href="#">3 Sao
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i> 01</a>
+											</li>
+											<li>
+												<a href="#">2 Sao
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i> 01</a>
+											</li>
+											<li>
+												<a href="#">1 Sao
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i> 01</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="review_list">
+								<div class="review_item">
+									<div class="media">
+										<div class="d-flex">
+											<img src="/img/product/single-product/review-1.png" alt="">
+										</div>
+										<div class="media-body">
+											<h4>Nguyễn Duy Khánh</h4>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+									</div>
+									<p>Rất chất chơi người dơi. Có vẻ vô lý nhưng rất thuyết phục!</p>
+								</div>
+								<div class="review_item">
+									<div class="media">
+										<div class="d-flex">
+											<img src="/img/product/single-product/review-2.png" alt="">
+										</div>
+										<div class="media-body">
+											<h4>Blake Ruiz</h4>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								</div>
+								<div class="review_item">
+									<div class="media">
+										<div class="d-flex">
+											<img src="/img/product/single-product/review-3.png" alt="">
+										</div>
+										<div class="media-body">
+											<h4>Blake Ruiz</h4>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</div>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="review_box">
+								<h4>Thêm 1 Review</h4>
+								<p>Đánh giá của bạn:</p>
+								<ul class="list">
+									<li>
+										<a href="#">
+											<i class="fa fa-star"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-star"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-star"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-star"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-star"></i>
+										</a>
+									</li>
+								</ul>
+								<p>Nổi bật</p>
+								<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="text" class="form-control" id="name" name="name" placeholder="Tên đầy đủ">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="email" class="form-control" id="email" name="email" placeholder="Địa chỉ email">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="text" class="form-control" id="number" name="number" placeholder="Số điện thoại">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea class="form-control" name="message" id="message" rows="1" placeholder="Review"></textarea>
+										</div>
+									</div>
+									<div class="col-md-12 text-right">
+										<button type="submit" value="submit" class="btn submit_btn">Đăng ngay!</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Product Description Area =================-->
+
+	

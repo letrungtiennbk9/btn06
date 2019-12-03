@@ -1,0 +1,259 @@
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>Danh sách sản phẩm</h2>
+					<div class="page_link">
+						<a href="/index">Trang chủ</a>
+						<a href="/category">Loại sản phẩm</a>
+						<a href="/category">Thời trang nữ</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Category Product Area =================-->
+	<section class="cat_product_area section_gap">
+		<div class="container-fluid">
+			<div class="row flex-row-reverse">
+				<div class="col-lg-9">
+					<div class="product_top_bar">
+						<div class="left_dorp">
+							<select class="sorting">
+								<option value="1">Sắp xếp mặc định</option>
+								<option value="2">Giá tăng dần</option>
+								<option value="3">Giá giảm dần</option>
+								<option value="4">A-Z</option>
+								<option value="5">Z-A</option>
+							</select>
+							<select id="products-num" class="show">
+								<option onclick="dc.showLimitedProducts();" value="10">10</option>
+								<option onclick="dc.showLimitedProducts();" value="20">20</option>
+								<option onclick="dc.showLimitedProducts();" value="30">30</option>
+							</select>
+						</div>
+					</div>
+
+					<button onclick="dc.loadMore();">aaaaaa</button>
+					<div id="category-single-product-section-1" class="latest_product_inner row">
+						<!--Ajax-->
+						<div class="row">
+						{{#each aa}}
+							<div class="col col1">
+								<div class="f_p_item">
+									<div class="f_p_img">
+										<a href="/single-product/{{this._id}}">
+										<img class="img-flui sizeImage" src={{this.imagePath}} alt="img">
+										</a>
+										<div class="p_icon">
+											<a href="#">
+												<i class="lnr lnr-heart"></i>
+											</a>
+											<a href="#">
+												<i class="lnr lnr-cart"></i>
+											</a>
+										</div>							
+									</div>
+									<a href="/single-product/{{this._id}}">
+										<h4> {{this.title}}</h4>
+									</a>
+									<h5>{{this.price}} VND</h5>
+								</div>
+							</div>
+						{{/each}}
+					</div>
+					</div>
+
+				</div>
+				<div class="col-lg-3">
+					<div class="left_sidebar_area">
+						<aside class="left_widgets cat_widgets">
+							<div class="l_w_title">
+								<h3>Các loại sản phẩm</h3>
+							</div>
+							<div class="widgets_inner">
+								<ul class="list">
+									<li>
+										<a href="javascript:;" onclick="dc.showProductsAoKhoac();">Áo khoác</a>
+									</li>
+									<li>
+										<a href="javascript:;">Áo </a>
+										<ul class="list">
+											<li>
+												<a href="javascript:;" onclick="dc.showProductsAoLen();">Áo len</a>
+											</li>
+											<li>
+												<a href="javascript:;" onclick="dc.showProductsAoThun();">Áo thun</a>
+											</li>
+											<li>
+												<a href="javascript:;" onclick="dc.showProductsAoLot();">Áo lót</a>
+											</li>
+											<li>
+												<a href="javascript:;" onclick="dc.showProductsSoMi();">Áo sơ mi</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Quần/Váy</a>
+										<ul class="list">
+											<li>
+												<a href="javascript:;"  onclick="dc.showProductsQuanTay();">Quần tây</a>
+											</li>
+											<li>
+												<a href="javascript:;"  onclick="dc.showProductsTheThao();">Quần thể thao</a>
+											</li>
+											<li>
+												<a href="javascript:;"  onclick="dc.showProductsQuanJogger();">Quần jogger</a>
+											</li>
+											<li>
+												<a href="javascript:;"  onclick="dc.showProductsVay();">Váy</a>
+											</li>
+											<li>
+												<a href="javascript:;"  onclick="dc.showProductsDam();">Đầm</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Giày</a>
+										<ul class="list">
+											<li>
+												<a href="javascript:;" onclick="dc.showProductsSneaker();">Sneaker</a>
+											</li>
+											<li>
+												<a href="javascript:;" onclick="dc.showProductsGiayCaoCo();">Giày cao cổ</a>
+											</li>
+											<li>
+												<a href="javascript:;" onclick="dc.showProductsGiayCaoGot();">Giày cao gót</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</aside>
+						<aside class="left_widgets p_filter_widgets">
+							<div class="l_w_title">
+								<h3>Lọc sản phẩm</h3>
+							</div>
+							<div class="widgets_inner">
+								<h4>Thương hiệu</h4>
+								<ul class="list">
+									<li onclick="changeActive(this);" class="checkactive">
+										<a href="javascript:;" onclick="dc.showProductsGucci(); ">Gucci</a>
+									</li>
+									<li onclick="changeActive(this);" class="checkactive">
+										<a href="javascript:;" onclick="dc.showProductsHM();">H&M</a>
+									</li>
+									<li class="active checkactive" onclick="changeActive(this);">
+										<a href="javascript:;" onclick="dc.showProductsPullBear();">Pull&Bear</a>
+									</li>
+									<li onclick="changeActive(this);" class="checkactive">
+										<a href="javascript:;" onclick="dc.showProductsMango();">Mango</a>
+									</li>
+									<li onclick="changeActive(this);" class="checkactive">
+										<a href="javascript:;" onclick="dc.showProductsRoutine();">Routine</a>
+									</li>
+								</ul>
+							</div>
+
+							<script>
+
+								function changeActive(elem) {
+									//console.log("Có vô");
+									// get all 'a' elements
+									var a = document.getElementsByClassName('checkactive');
+									// loop through all 'a' elements
+									for (i = 0; i < a.length; i++) {
+										// Remove the class 'active' if it exists
+										a[i].classList.remove("active");
+									}
+									// add 'active' classs to the element that was clicked
+									elem.classList.add('active');
+								}
+							</script>
+
+							<div class="widgets_inner">
+								<h4>Màu sắc</h4>
+								<ul class="list">
+									<li class="checkactive" onclick="changeActive(this);">
+										<a href="javascript:;" onclick="dc.showProductsBlack();">Đen</a>
+									</li>
+									<li class="checkactive" onclick="changeActive(this);">
+										<a href="javascript:;" onclick="dc.showProductsWhite();">Trắng</a>
+									</li>
+									<li class="checkactive" onclick="changeActive(this);">
+										<a href="javascript:;" onclick="dc.showProductsBlue();">Xanh da trời</a>
+									</li>
+									<li class="checkactive" onclick="changeActive(this);">
+										<a href="javascript:;" onclick="dc.showProductsGold();">Vàng gold</a>
+									</li>
+									<li class="checkactive" onclick="changeActive(this);">
+										<a href="javascript:;" onclick="dc.showProductsPink();">Hồng mạnh mẽ</a>
+									</li>
+								</ul>
+							</div>
+							<div class="widgets_inner">
+								<h4>Giá</h4>
+								<div class="range_item">
+									<div id="slider-range"></div>
+									<div class="row m0">
+										<label for="amount">Nhập giá : </label>
+										<input style="background: white" type="text" id="amount" onkeyup="myFunction(this.value)">
+									</div>
+								</div>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</div>
+
+
+			<script>
+
+				function myFunction(val) {
+					dc.showProductsPrice();
+				}
+
+			</script>
+			
+
+
+			<div class="row">
+				<nav class="cat_page mx-auto" aria-label="Page navigation example">
+					<ul id="page-pagination" class="pagination">
+						<li class="page-item">
+							<div class="page-link">
+								<i class="fa fa-chevron-left" aria-hidden="true"></i>
+							</div>
+						</li>
+						<li class="page-item active">
+							<div class="page-link">01</div>
+						</li>
+						<li class="page-item">
+							<div class="page-link">02</div>
+						</li>
+						<li class="page-item">
+							<div class="page-link">03</div>
+						</li>
+						<li class="page-item blank">
+							<div class="page-link">...</div>
+						</li>
+						<li class="page-item">
+							<div class="page-link">09</div>
+						</li>
+						<li class="page-item">
+							<div class="page-link">
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</section>
+	<!--================End Category Product Area =================-->
+
+	
