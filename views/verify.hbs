@@ -1,0 +1,40 @@
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>Xác nhận tài khoản</h2>
+					<div class="page_link">
+						<a href="/index">Trang chủ</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Login Box Area =================-->
+	<section class="login_box_area p_120">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+				{{#if hasErrors}}
+            		<div class="alert alert-danger login_form">
+                			<p>{{messages}}</p>
+            		</div>
+       			{{/if}}
+	      	<form class="form-signin" action="verify" method="post">
+            <h2 class="form-signin-heading">Xác nhận tài khoản</h2>
+            <label for="secretToken" class="sr-only">Mã xác nhận</label>
+            <input type="secretToken" id="secretToken" name="secretToken" class="form-control" placeholder="Mã xác nhận" required autofocus>
+            <br/>
+            <button class="btn btn-lg btn-default btn-block" type="submit">Xác nhận</button>
+           </form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+
+	

@@ -1,0 +1,71 @@
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>Đăng nhập/Đăng ký</h2>
+					<div class="page_link">
+						<a href="/index">Home</a>
+						<a href="/registration">Đăng ký</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Login Box Area =================-->
+	<section class="login_box_area p_120">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<img class="img-fluid" src="../img/login.jpg" alt="">
+						<div class="hover">
+							<h4>Bạn mới vào trang web của chúng tôi?</h4>
+							<p>Sẩn phẩm của chúng tôi rất tuyệt vời, bạn hãy thử trải nghiệm, nó sẽ không làm bạn thất vọng đâu!</p>
+							<a class="main_btn" href="#">Tạo tài khoản mới</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner reg_form">
+						<h3>Tạo tài khoản</h3>
+						{{#if hasErrors}}
+            				<div class="alert alert-danger login_form">
+                				{{#each messages }}
+                    				<p>{{this.msg}}</p>
+               					{{/each}}
+            				</div>
+       					{{/if}}
+
+						<form class="row login_form" action="registration" method="post" id="contactForm" novalidate="novalidate">
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="username" name="username" placeholder="Tên tài khoản">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Họ tên">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Địa chỉ email">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="password" class="form-control" id="password2" name="password2" placeholder="Xác nhận mật khẩu">
+							</div>
+							<div class="col-md-12 form-group">
+								<button type="submit" value="submit" class="btn submit_btn">Đăng ký</button>
+							</div>
+							<div class="col-md-12">
+								<p>Đã có tài khoản? <a href="login">Đăng nhập</a></p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->

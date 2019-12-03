@@ -1,0 +1,53 @@
+
+	<!--================Home Banner Area =================-->
+	<section class="banner_area">
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container">
+				<div class="banner_content text-center">
+					<h2>Đăng nhập/Đăng ký</h2>
+					<div class="page_link">
+						<a href="/index">Trang chủ</a>
+						<a href="/login">Đăng nhập</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Login Box Area =================-->
+	<section class="login_box_area p_120">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="login_form_inner">
+						<h3>Thay đổi mật khẩu</h3>
+						{{#if hasErrors}}
+            				<div class="alert alert-danger login_form">
+                    				<p>{{error}}</p>
+            				</div>
+						{{/if}}
+						{{#if hasSuccess}}
+							<div class="alert alert-success login_form">
+                    				<p>{{success}}</p>		
+            				</div>
+						{{/if}}
+						<form class="row login_form" action="{{ token }}" method="post" id="contactForm" novalidate="novalidate">
+							<div class="col-md-12 form-group">
+								<input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu mới">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="password" class="form-control" id="confirm" name="confirm" placeholder="Xác nhận lại mật khẩu">
+							</div>
+							<div class="col-md-12 form-group">
+								<button type="submit" value="submit" class="btn submit_btn">Thay đổi mật khẩu</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+
+	
